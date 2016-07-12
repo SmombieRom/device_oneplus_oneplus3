@@ -1,3 +1,6 @@
 add_lunch_combo cm_oneplus3-user
 add_lunch_combo cm_oneplus3-userdebug
 add_lunch_combo cm_oneplus3-eng
+add_brunch_combo cm_oneplus3-user
+add_brunch_combo cm_oneplus3-userdebug
+add_brunch_combo cm_oneplus3-eng
