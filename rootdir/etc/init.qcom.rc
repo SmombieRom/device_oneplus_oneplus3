@@ -97,6 +97,10 @@ on boot
     chown root system /proc/touchpanel/music_enable
     chmod 0660 /proc/touchpanel/music_enable
 
+    #DASH
+    chmod 0666 /dev/dash/
+    restorecon  /dev/dash
+
     chown root system /proc/touchpanel/flashlight_enable
     chmod 0660 /proc/touchpanel/flashlight_enable
 
@@ -710,6 +714,13 @@ service mdtpd /system/vendor/bin/mdtpd
     class late_start
     user root
     group system radio drmrpc
+
+service dashd /sbin/dashd
+     class core
+     critical
+     seclabel u:r:dashd:s0
+     group root system
+ 
 
 on charger
     write /sys/devices/system/cpu/cpu2/online 0
