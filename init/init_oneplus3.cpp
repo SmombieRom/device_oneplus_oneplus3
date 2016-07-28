@@ -95,7 +95,7 @@ void vendor_load_properties() {
 // If you want Unknown Device fix to be generic, you can replace the next line with this :- 
 // rc = property_get("ro.product.device", device);
 
-    rc = property_get("ro.cm.device", device);
+    rc = property_get("ro.pac.device", device);
     if (!rc || strncmp(device, "oneplus3", PROP_VALUE_MAX))
         return;
 
